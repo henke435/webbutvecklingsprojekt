@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HouseFinder -</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <a href="index.html"
+          ><img src="bilder/Housefinder.png" width="200px"
+        /></a>
+
+        <nav>
+          <ul>
+            <li><a href="#">Våra bostäder</a></li>
+            <li><a href="#">Om oss</a></li>
+            <li><a href="#">Kontakta oss</a></li>
+            <li>
+              <a href="login.html"
+                ><img id="account" src="bilder/account-icon.png"
+              /></a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <h1>Registrera eller logga in</h1>
+    <div class="container" id="login-form">
+      <form href="index.html" method="post">
+        <h2>Användarnamn</h2>
+        <input
+          type="text"
+          name="anvandarnamn"
+          placeholder="Användarnamn"
+          required
+        />
+        <h2>E-post address</h2>
+        <input type="email" name="email" placeholder="E-post adress" required />
+        <h2>Lösenord</h2>
+        <input
+          type="password"
+          name="losenord"
+          placeholder="Lösenord"
+          required
+        />
+        <h2>Bankkortnummer</h2>
+        <input
+          type="text"
+          id="bankkortnummer"
+          placeholder="XXXX-XXXX-XXXX-XXXX"
+          required
+        />
+        <h2>Giltighetstid</h2>
+        <input
+          type="text"
+          id="utgangsdatum"
+          placeholder="Giltighetstid (MM/ÅÅ)"
+          required
+        />
+        <h2>CVC</h2>
+        <input
+          type="text"
+          name="cvc"
+          maxlength="3"
+          placeholder="CVC"
+          required
+        />
+        <input type="submit" value="Logga in" />
+      </form>
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2024, HouseFinder™</p>
+        <ul>
+          <li><a href="integritetspolicy.html">Integritetspolicy</a></li>
+          <li><a href="anvandarvillkor.html">Användarvillkor</a></li>
+        </ul>
+      </div>
+    </footer>
+    <script src="script.js"></script>
+  </body>
+</html>

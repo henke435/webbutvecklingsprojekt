@@ -3,12 +3,86 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+h1 {
+  font-size: 30px;
+  text-align: center;
+}
+#login-form {
+  display: flex;
+  justify-content: center;
+}
+form {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  width: 30%;
+}
+input[type="text"],
+input[type="email"],
+input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  box-sizing: border-box;
+}
+input[type="submit"] {
+  background-color: #6079ad;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}
+input[type="submit"]:hover {
+  background-color: #6079ad;
+}
 body {
   font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
   line-height: 1.6;
 }
-
+ul {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  text-transform: uppercase;
+  color: grey;
+}
+ul li {
+  padding: 0 0.5em 0.25em;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+  transition: 0.3s;
+}
+ul li:hover {
+  color: #fff;
+}
+ul li:before {
+  content: "";
+  position: absolute;
+  inset: calc(100% - 3px) 0 0 0;
+  background: #6079ad;
+  scale: 0 1;
+  transition: 0.3s, translate 0s 0.3s;
+}
+ul:hover li:before {
+  scale: 1;
+}
+ul li:hover:before {
+  translate: 0;
+  transition: 0.3s;
+}
+ul:hover li:has(~ li:hover):before {
+  translate: 100% 0;
+  transition: 0.2s 0.2s, scale 0s 0.4s;
+}
+ul:hover li:hover ~ li:before {
+  translate: -100% 0;
+  transition: 0.2s 0.2s, scale 0s 0.4s;
+}
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -26,7 +100,19 @@ header .container {
   justify-content: space-between;
   align-items: center;
 }
-
+#read-more {
+  font-size: 9px;
+}
+.first-box {
+  display: flex;
+  padding: 20px;
+  justify-content: space-evenly;
+}
+.policy {
+  padding-top: 10%;
+  width: 40%;
+  text-align: center;
+}
 header nav ul {
   list-style: none;
 }
@@ -41,17 +127,30 @@ header nav ul li a {
   text-decoration: none;
 }
 
+a {
+  text-decoration: none;
+  color: black;
+}
+h2 {
+  font-size: medium;
+}
+#account {
+  width: 30px;
+}
 .hero {
-  background-image: url("najs.jpg");
+  background-image: url("bilder/najs.jpg");
   background-size: cover;
   background-position: center;
   color: #f1f1f4;
   text-align: center;
   padding: 100px 0;
 }
-
+#main-hero {
+  background-color: rgba(0, 0, 0, 0.4);
+  padding-bottom: 40px;
+}
 .hero h2 {
-  font-size: 36px;
+  font-size: 60px;
   margin-bottom: 20px;
 }
 
@@ -83,12 +182,12 @@ header nav ul li a {
   margin-bottom: 50px;
 }
 
-.service {
+.service-item {
   text-align: center;
   margin-bottom: 40px;
 }
 
-.service h3 {
+.service-item h3 {
   font-size: 24px;
   margin-bottom: 20px;
 }
@@ -98,4 +197,7 @@ footer {
   color: #000;
   text-align: center;
   padding: 20px 0;
+}
+.container.hero {
+  background: rgba(0, 0, 0, 0.6);
 }
