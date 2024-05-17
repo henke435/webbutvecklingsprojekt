@@ -108,7 +108,7 @@ header .container {
   padding: 20px;
   justify-content: space-evenly;
 }
-.policy {
+.main-texts {
   padding-top: 10%;
   width: 40%;
   text-align: center;
@@ -132,6 +132,7 @@ a {
   color: black;
 }
 h2 {
+  text-align: center;
   font-size: medium;
 }
 #account {
@@ -153,7 +154,26 @@ h2 {
   font-size: 60px;
   margin-bottom: 20px;
 }
-
+.property-image {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+.cta-button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  text-align: center;
+  transition: background-color 0.3s ease;
+}
+.cta-button:hover {
+  background-color: #0056b3;
+}
 .hero p {
   font-size: 18px;
   margin-bottom: 30px;
@@ -191,7 +211,12 @@ h2 {
   font-size: 24px;
   margin-bottom: 20px;
 }
-
+h4 {
+  text-align: center;
+}
+h6 {
+  text-align: center;
+}
 footer {
   background-color: #f1f1f4;
   color: #000;
